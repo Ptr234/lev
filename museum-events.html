@@ -18,11 +18,17 @@
         <div class="header-icons">
             <i>🔔</i>
             <i>🔍</i>
-            <div class="menu-icon">
+            <div class="menu-icon" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">HOME</a>
+            <a href="theater-events.html">SCHEDULE</a>
         </div>
     </header>
 
@@ -167,6 +173,28 @@
         // Load more functionality
         document.querySelector('.load-more-btn').addEventListener('click', function() {
             window.open('https://christsheart.org/register', '_blank');
+        });
+        
+        // Mobile navigation toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuIcon = document.querySelector('.menu-icon');
+            
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                menuIcon.classList.remove('active');
+            } else {
+                mobileNav.classList.add('active');
+                menuIcon.classList.add('active');
+            }
+        }
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileNav').classList.remove('active');
+                document.querySelector('.menu-icon').classList.remove('active');
+            });
         });
     </script>
 </body>
