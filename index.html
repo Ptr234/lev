@@ -3,21 +3,844 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>November Blessing Conference 2025 - 14th Edition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="museum-events.css">
+    <title>November Blessing Conference 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+/* Branding Colors:
+   Deep Purple: #4B0082
+   Golden Yellow: #FFD700
+   Dark Gray: #2C2C2C
+   Light Pink: #FFB6C1 (minor accent)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2C2C2C;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    border: 2px solid #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+.header-icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), linear-gradient(135deg, #4B0082 0%, #3D0066 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 60px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.hero-theme {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.hero-scripture {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.hero-dates {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFD700;
+}
+
+.hero-content h1::before,
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    height: 1px;
+    background-color: #FFD700;
+}
+
+.hero-content h1::before {
+    left: -220px;
+}
+
+.hero-content h1::after {
+    right: -220px;
+}
+
+/* ===== OVERVIEW ===== */
+.overview-section {
+    padding: 80px 60px;
+    background-color: #F5F5F5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #FFD700;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4B0082;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 60px;
+    display: inline-block;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 1px;
+    background-color: #4B0082;
+    opacity: 0.3;
+}
+
+.section-title::before {
+    left: -170px;
+}
+
+.section-title::after {
+    right: -170px;
+}
+
+.section-description {
+    color: #2C2C2C;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== EVENTS SECTION ===== */
+.events-section {
+    padding: 80px 60px;
+    background-color: #FFFFFF;
+}
+
+.section-title-alt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4B0082;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.event-card {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 2px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
+    border-color: #4B0082;
+}
+
+.event-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    position: relative;
+}
+
+.event-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #FFD700 0%, transparent 100%);
+    opacity: 0.1;
+}
+
+.event-content {
+    padding: 30px 25px;
+}
+
+.event-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #FFB6C1;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: rgba(255, 182, 193, 0.15);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.event-time {
+    font-size: 12px;
+    color: #FFB6C1;
+    margin-bottom: 15px;
+    font-weight: 600;
+    background: rgba(255, 182, 193, 0.15);
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.event-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #4B0082;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.event-details-extra {
+    font-size: 11px;
+    color: #FFB6C1;
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ===== SCHEDULE SECTION ===== */
+.schedule-section {
+    padding: 80px 60px;
+    background-color: #F5F5F5;
+}
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.schedule-intro {
+    color: #2C2C2C;
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.schedule-item {
+    display: flex;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 2px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+}
+
+.schedule-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
+    border-color: #4B0082;
+}
+
+.schedule-date-box {
+    width: 120px;
+    min-width: 120px;
+    background: linear-gradient(135deg, #4B0082 0%, #3D0066 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+.schedule-day {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.schedule-month {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.schedule-time {
+    background-color: #FFD700;
+    color: #2C2C2C;
+    padding: 8px 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.schedule-details {
+    flex: 1;
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid #FFD700;
+}
+
+.schedule-category {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFB6C1;
+    margin-bottom: 10px;
+    font-weight: 600;
+    background: rgba(255, 182, 193, 0.15);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.schedule-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    color: #4B0082;
+}
+
+.schedule-description {
+    font-size: 13px;
+    color: #2C2C2C;
+    line-height: 1.5;
+}
+
+.schedule-image {
+    width: 350px;
+    background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.schedule-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #FFD700 0%, transparent 100%);
+    opacity: 0.1;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 100px 60px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    border-left: 5px solid #FFD700;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.about-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+    border: 2px solid #E8E8E8;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
+    border-color: #4B0082;
+}
+
+.about-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #4B0082;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about-item p {
+    font-size: 14px;
+    color: #2C2C2C;
+    line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    padding: 60px 60px 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    border: 2px solid #FFD700;
+    display: inline-flex;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #FFD700;
+    margin-bottom: 25px;
+    padding: 12px 20px;
+    border-radius: 3px;
+}
+
+.footer-mission {
+    font-size: 12px;
+    color: #E8E8E8;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-address,
+.footer-phone,
+.footer-email,
+.footer-website,
+.footer-social {
+    font-size: 13px;
+    color: #E8E8E8;
+    margin-bottom: 8px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.footer-column h4 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #FFD700;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #E8E8E8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #FFD700;
+}
+
+.footer-column ul li small {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #4B0082;
+    color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
+    border: 2px solid #FFD700;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(75, 0, 130, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1200px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .overview-section,
+    .events-section,
+    .schedule-section,
+    .about-section {
+        padding: 60px 40px;
+    }
+
+    .schedule-image {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex !important;
+    }
+    
+    .mobile-nav {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #2C2C2C;
+        padding: 100px 40px 40px;
+        flex-direction: column;
+        gap: 15px;
+        transition: right 0.4s;
+        z-index: 1000;
+        box-shadow: -5px 0 20px rgba(75, 0, 130, 0.5);
+        visibility: hidden;
+    }
+    
+    .mobile-nav.active {
+        right: 0;
+        visibility: visible;
+    }
+    
+    .mobile-nav a {
+        color: #FFFFFF !important;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        transition: all 0.3s;
+        display: block;
+    }
+    
+    .mobile-nav a:hover {
+        color: #FFD700 !important;
+        padding-left: 10px;
+    }
+    
+    .menu-icon.active {
+        transform: rotate(90deg);
+    }
+    
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        padding: 0 20px;
+    }
+
+    .hero-content h1::before,
+    .hero-content h1::after,
+    .section-title::before,
+    .section-title::after {
+        display: none;
+    }
+
+    .overview-section,
+    .events-section,
+    .schedule-section,
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .section-title,
+    .section-title-alt {
+        font-size: 28px;
+        padding: 0;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+    }
+
+    .schedule-date-box {
+        width: 100%;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .schedule-details {
+        padding: 25px 20px;
+        border-left: none;
+        border-top: 4px solid #FFD700;
+    }
+
+    .schedule-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 40px 20px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .section-title,
+    .section-title-alt {
+        font-size: 24px;
+    }
+}
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo">Christ's Heart</div>
         <nav>
-            <a href="index.html">HOME</a>
-            <a href="theater-events.html">SCHEDULE</a>
+            <a href="#home">HOME</a>
+            <a href="#schedule">SCHEDULE</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
         </nav>
         <div class="header-icons">
-            
-            
             <div class="menu-icon" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
@@ -25,15 +848,15 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation Menu -->
         <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">HOME</a>
-            <a href="theater-events.html">SCHEDULE</a>
+            <a href="#home">HOME</a>
+            <a href="#schedule">SCHEDULE</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <h1>NOVEMBER BLESSING</h1>
             <div class="hero-subtitle">Conference 2025 - 14th Edition</div>
@@ -43,81 +866,178 @@
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section class="events-section">
+    <section class="overview-section">
         <div class="section-header">
             <div class="section-subtitle">Seven-Day International Gathering</div>
-            <h2 class="section-title">CONFERENCE VENUES & SCHEDULE</h2>
+            <h2 class="section-title">CONFERENCE OVERVIEW</h2>
             <p class="section-description">
-                Join ministers, believers, and seekers from around the world for seven transformative days featuring powerful worship, teaching, prophetic ministry, and vibrant fellowship. This premier spiritual event marks a distinction to usher believers to the end of the year and prepare them for the coming season.
+                The November Blessing Conference is an annual seven-day international gathering organized by Christ's Heart Ministries International. This premier spiritual event attracts ministers, believers, and seekers from across the globe, featuring powerful worship, transformative teaching, prophetic ministry, and vibrant fellowship.
             </p>
+        </div>
+    </section>
+
+    <section class="events-section">
+        <div class="section-header">
+            <h2 class="section-title-alt">CONFERENCE VENUES & SESSIONS</h2>
         </div>
 
         <div class="events-grid">
-            <!-- Event Card 1 -->
             <div class="event-card">
-                <div class="event-image">
-                    <img src="WhatsApp Image 2025-10-27 at 18.55.07.jpeg" alt="MTN Arena Sessions - November Blessing 2025">
-                </div>
+                <div class="event-image">MTN Arena</div>
                 <div class="event-content">
                     <div class="event-date">Nov 17 - Nov 21, 2025</div>
                     <h3 class="event-title">MTN ARENA KAMPALA</h3>
                     <div class="event-time">5:00 PM - 8:30 PM EAT</div>
                     <div class="event-details-extra">Main Evening Sessions</div>
-                    <a href="#" class="view-more-btn">Learn more</a>
                 </div>
             </div>
 
-            <!-- Event Card 2 -->
             <div class="event-card">
-                <div class="event-image">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect fill='%23c9a876' width='400' height='300'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16' font-family='Arial'>Church Leaders</text></svg>" alt="Church Leaders Sessions">
-                </div>
+                <div class="event-image">Leaders Sessions</div>
                 <div class="event-content">
                     <div class="event-date">Nov 19 - Nov 21, 2025</div>
                     <h3 class="event-title">CHURCH LEADERS SESSIONS</h3>
                     <div class="event-time">10:00 AM - 1:00 PM EAT</div>
                     <div class="event-details-extra">Leadership Development & Equipping</div>
-                    <a href="#" class="view-more-btn">Learn more</a>
                 </div>
             </div>
 
-            <!-- Event Card 3 -->
             <div class="event-card">
-                <div class="event-image">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect fill='%23b8a89a' width='400' height='300'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16' font-family='Arial'>Mukono HQ</text></svg>" alt="Mukono Headquarters">
-                </div>
+                <div class="event-image">Mukono HQ</div>
                 <div class="event-content">
                     <div class="event-date">Nov 22 - Nov 23, 2025</div>
                     <h3 class="event-title">MUKONO CHRIST'S HEART HQ</h3>
                     <div class="event-time">Final Weekend Sessions</div>
                     <div class="event-details-extra">Ministry Headquarters</div>
-                    <a href="#" class="view-more-btn">Learn more</a>
                 </div>
             </div>
 
-            <!-- Event Card 4 -->
-            <div class="event-card speakers-card">
-                <div class="event-image">
-                    <img src="WhatsApp Image 2025-10-27 at 19.05.32.jpeg" alt="Featured Speakers - Bishop Isaiah & Rev. Deborah Mbuga">
-                </div>
+            <div class="event-card">
+                <div class="event-image">Conference Hosts</div>
                 <div class="event-content">
                     <div class="event-date">Founded 2007 - 50+ Branches Worldwide</div>
                     <h3 class="event-title">BISHOP ISAIAH & REV. DEBORAH MBUGA</h3>
                     <div class="event-time">Founders & Conference Hosts</div>
                     <div class="event-details-extra">+ Special Guest: Dr. Adonijah Ogbonnaya</div>
-                    <a href="#" class="view-more-btn">Meet Speakers</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="load-more-container">
-            <button class="load-more-btn">Register Now</button>
+    <section class="schedule-section" id="schedule">
+        <div class="schedule-header">
+            <h2 class="section-title">DETAILED SCHEDULE</h2>
+            <p class="schedule-intro">
+                Join ministers, believers, and seekers from around the world for seven transformative days featuring powerful worship, teaching, and prophetic ministry.
+            </p>
+        </div>
+
+        <div class="schedule-list">
+            <div class="schedule-item">
+                <div class="schedule-date-box">
+                    <div class="schedule-month">NOV</div>
+                    <div class="schedule-day">17-21</div>
+                    <div class="schedule-time">5:00 PM</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-category">MAIN SESSIONS</div>
+                    <h3 class="schedule-name">MTN Arena Kampala</h3>
+                    <p class="schedule-description">Evening Sessions with Bishop Isaiah & Rev. Deborah Mbuga featuring powerful worship, transformative teaching, and prophetic ministry.</p>
+                </div>
+                <div class="schedule-image">Arena Sessions</div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-date-box">
+                    <div class="schedule-month">NOV</div>
+                    <div class="schedule-day">19-21</div>
+                    <div class="schedule-time">10:00 AM</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-category">LEADERSHIP</div>
+                    <h3 class="schedule-name">Church Leaders Sessions</h3>
+                    <p class="schedule-description">Specialized sessions designed to equip church leaders for greater Kingdom impact through strategic teaching and leadership development.</p>
+                </div>
+                <div class="schedule-image">Leaders</div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-date-box">
+                    <div class="schedule-month">NOV</div>
+                    <div class="schedule-day">22-23</div>
+                    <div class="schedule-time">9:00 AM</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-category">FINALE</div>
+                    <h3 class="schedule-name">Mukono Christ's Heart HQ</h3>
+                    <p class="schedule-description">Final weekend sessions at the ministry headquarters, culminating in powerful worship and commissioning for the year ahead.</p>
+                </div>
+                <div class="schedule-image">Headquarters</div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-date-box">
+                    <div class="schedule-month">SPECIAL</div>
+                    <div class="schedule-day">GUEST</div>
+                    <div class="schedule-time">Featured</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-category">GUEST SPEAKER</div>
+                    <h3 class="schedule-name">Dr. Adonijah Ogbonnaya</h3>
+                    <p class="schedule-description">International speaker from USA bringing powerful insights and prophetic ministry throughout the conference sessions.</p>
+                </div>
+                <div class="schedule-image">Dr. Ogbonnaya</div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-date-box">
+                    <div class="schedule-month">HOST</div>
+                    <div class="schedule-day">TEAM</div>
+                    <div class="schedule-time">Leaders</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-category">CONFERENCE HOSTS</div>
+                    <h3 class="schedule-name">Bishop Isaiah & Rev. Deborah Mbuga</h3>
+                    <p class="schedule-description">Founders of Christ's Heart Ministries International, leading this transformative seven-day gathering with wisdom and prophetic insight.</p>
+                </div>
+                <div class="schedule-image">Hosts</div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2 class="section-title">ABOUT CHRIST'S HEART MINISTRIES</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h4>Founded</h4>
+                    <p>2007 by Bishop Isaiah and Rev. Deborah Mbuga</p>
+                </div>
+                <div class="about-item">
+                    <h4>Headquarters</h4>
+                    <p>Mukono, Uganda</p>
+                </div>
+                <div class="about-item">
+                    <h4>Global Reach</h4>
+                    <p>50+ branches worldwide</p>
+                </div>
+                <div class="about-item">
+                    <h4>Mission</h4>
+                    <p>Raising Christian believers who pursue truth and wholeness of the gospel after the heart of Christ.</p>
+                </div>
+                <div class="about-item">
+                    <h4>Mandate</h4>
+                    <p>To raise an apostolic generation through discipleship and leadership development.</p>
+                </div>
+                <div class="about-item">
+                    <h4>Conference Goals</h4>
+                    <p>Spiritual renewal, outreach & growth, community building, and leadership development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
         <div class="footer-content">
             <div class="footer-column">
                 <div class="footer-logo">Christ's Heart</div>
@@ -132,75 +1052,66 @@
             <div class="footer-column">
                 <h4>Conference Info</h4>
                 <ul>
-                    <li><a href="#">Schedule & Sessions</a></li>
-                    <li><a href="#">Speakers & Ministry</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Accommodation</a></li>
+                    <li><a href="#schedule">Schedule & Sessions</a></li>
+                    <li><a href="#about">About Ministry</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="https://christsheart.org">Visit Website</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Key Contacts</h4>
                 <ul>
-                    <li><a href="tel:+256705243441">Pastor Isaac Waiswa</a><br><small>+256 705 243 441 / +256 785 357 567</small></li>
+                    <li><a href="tel:+256705243441">Pastor Isaac Waiswa</a><br><small>+256 705 243 441</small></li>
                     <li><a href="tel:+256705029989">Pastor Robert Mabirizi</a><br><small>+256 705 029 989</small></li>
-                    <li><a href="tel:+256775692334">Pastor Christine Masiika. T</a><br><small>+256 775 692 334</small></li>
-                    <li><a href="mailto:info@christsheart.org">General Inquiries</a><br><small>info@christsheart.org</small></li>
+                    <li><a href="tel:+256775692334">Pastor Christine Masiika</a><br><small>+256 775 692 334</small></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Follow us</h4>
+                <h4>Connect With Us</h4>
                 <ul>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <div class="back-to-top" id="backToTop">↑</div>
 
     <script>
-        // Back to Top functionality
         const backToTop = document.getElementById('backToTop');
         
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            backToTop.classList.toggle('visible', window.pageYOffset > 300);
         });
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        // Load more functionality
-        document.querySelector('.load-more-btn').addEventListener('click', function() {
-            window.open('https://christsheart.org/register', '_blank');
-        });
         
-        // Mobile navigation toggle
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
             const menuIcon = document.querySelector('.menu-icon');
-            
-            if (mobileNav.classList.contains('active')) {
-                mobileNav.classList.remove('active');
-                menuIcon.classList.remove('active');
-            } else {
-                mobileNav.classList.add('active');
-                menuIcon.classList.add('active');
-            }
+            mobileNav.classList.toggle('active');
+            menuIcon.classList.toggle('active');
         }
         
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', () => {
                 document.getElementById('mobileNav').classList.remove('active');
                 document.querySelector('.menu-icon').classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
     </script>
