@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>November Blessing Conference 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
 /* Branding Colors:
-   Deep Purple: #4B0082
+   Logo Purple: #A3368A (from official Christ's Heart logo)
    Golden Yellow: #FFD700
    Dark Gray: #2C2C2C
    Dark Pink: #C2185B (minor accent)
@@ -44,13 +45,13 @@ header {
 }
 
 .logo {
-    border: 2px solid #fff;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 nav {
@@ -99,7 +100,7 @@ nav a:hover {
 /* ===== HERO ===== */
 .hero {
     height: 500px;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), linear-gradient(135deg, #4B0082 0%, #3D0066 100%);
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), linear-gradient(135deg, #A3368A 0%, #8B2D76 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +199,7 @@ nav a:hover {
     font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #4B0082;
+    color: #A3368A;
     margin-bottom: 20px;
     position: relative;
     padding: 0 60px;
@@ -212,7 +213,7 @@ nav a:hover {
     top: 50%;
     width: 150px;
     height: 1px;
-    background-color: #4B0082;
+    background-color: #A3368A;
     opacity: 0.3;
 }
 
@@ -244,7 +245,7 @@ nav a:hover {
     font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #4B0082;
+    color: #A3368A;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -256,25 +257,25 @@ nav a:hover {
 }
 
 .event-card {
-    background-color: #FFFFFF;
+    background-color: #A3368A;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     border: 2px solid #E8E8E8;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+    box-shadow: 0 3px 12px rgba(163, 54, 138, 0.1);
 }
 
 .event-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
-    border-color: #4B0082;
+    box-shadow: 0 8px 25px rgba(163, 54, 138, 0.2);
+    border-color: #A3368A;
 }
 
 .event-image {
     width: 100%;
     height: 300px;
     overflow: hidden;
-    background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
+    background: linear-gradient(135deg, #A3368A 0%, #B8469C 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,27 +301,27 @@ nav a:hover {
 .event-date {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: #C2185B;
+    color: #FFFFFF;
     font-size: 13px;
     margin-bottom: 10px;
-    background: rgba(194, 24, 91, 0.15);
+    background: rgba(0, 0, 0, 0.3);
     padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;
     font-weight: 500;
-    border: 1px solid rgba(194, 24, 91, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .event-time {
     font-size: 12px;
-    color: #C2185B;
+    color: #FFFFFF;
     margin-bottom: 15px;
     font-weight: 600;
-    background: rgba(194, 24, 91, 0.15);
+    background: rgba(0, 0, 0, 0.3);
     padding: 3px 6px;
     border-radius: 3px;
     display: inline-block;
-    border: 1px solid rgba(194, 24, 91, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .event-title {
@@ -329,14 +330,14 @@ nav a:hover {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #4B0082;
+    color: #FFFFFF;
     margin-bottom: 20px;
     line-height: 1.4;
 }
 
 .event-details-extra {
     font-size: 11px;
-    color: #C2185B;
+    color: #FFFFFF;
     margin-top: 5px;
     font-style: italic;
     font-weight: 500;
@@ -356,7 +357,7 @@ nav a:hover {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #4B0082 0%, #FFD700 50%, #4B0082 100%);
+    background: linear-gradient(90deg, #A3368A 0%, #FFD700 50%, #A3368A 100%);
 }
 
 .schedule-header {
@@ -388,7 +389,7 @@ nav a:hover {
     transition: all 0.4s ease;
     border: 2px solid transparent;
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(75, 0, 130, 0.08);
+    box-shadow: 0 8px 30px rgba(163, 54, 138, 0.08);
     position: relative;
 }
 
@@ -399,7 +400,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(75, 0, 130, 0.02) 0%, rgba(255, 215, 0, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(163, 54, 138, 0.02) 0%, rgba(255, 215, 0, 0.02) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     border-radius: 18px;
@@ -407,8 +408,8 @@ nav a:hover {
 
 .schedule-item:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 50px rgba(75, 0, 130, 0.15);
-    border-color: rgba(75, 0, 130, 0.3);
+    box-shadow: 0 20px 50px rgba(163, 54, 138, 0.15);
+    border-color: rgba(163, 54, 138, 0.3);
 }
 
 .schedule-item:hover::before {
@@ -418,7 +419,7 @@ nav a:hover {
 .schedule-date-box {
     width: 160px;
     min-width: 160px;
-    background: linear-gradient(135deg, #4B0082 0%, #3D0066 100%);
+    background: linear-gradient(135deg, #A3368A 0%, #8B2D76 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -514,8 +515,8 @@ nav a:hover {
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 1.2;
-    color: #4B0082;
-    text-shadow: 0 1px 2px rgba(75, 0, 130, 0.1);
+    color: #A3368A;
+    text-shadow: 0 1px 2px rgba(163, 54, 138, 0.1);
 }
 
 .schedule-description {
@@ -530,7 +531,7 @@ nav a:hover {
     width: 400px;
     min-width: 400px;
     min-height: 300px;
-    background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
+    background: linear-gradient(135deg, #A3368A 0%, #B8469C 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -550,7 +551,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(75, 0, 130, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(163, 54, 138, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -583,21 +584,21 @@ nav a:hover {
     background-color: #FFFFFF;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+    box-shadow: 0 3px 12px rgba(163, 54, 138, 0.1);
     border: 2px solid #E8E8E8;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .about-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
-    border-color: #4B0082;
+    box-shadow: 0 8px 25px rgba(163, 54, 138, 0.2);
+    border-color: #A3368A;
 }
 
 .about-item h4 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
-    color: #4B0082;
+    color: #A3368A;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -623,14 +624,14 @@ footer {
 }
 
 .footer-logo {
-    border: 2px solid #FFD700;
-    display: inline-flex;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    color: #FFD700;
     margin-bottom: 25px;
-    padding: 12px 20px;
-    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
 }
 
 .footer-mission {
@@ -685,6 +686,18 @@ footer {
     color: #FFD700;
 }
 
+.footer-column ul li a i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    color: #FFD700;
+}
+
+.footer-column ul li a:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .footer-column ul li small {
     display: block;
     font-size: 11px;
@@ -699,7 +712,7 @@ footer {
     right: 30px;
     width: 45px;
     height: 45px;
-    background-color: #4B0082;
+    background-color: #A3368A;
     color: #FFD700;
     display: flex;
     align-items: center;
@@ -708,7 +721,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
+    box-shadow: 0 4px 15px rgba(163, 54, 138, 0.3);
     border: 2px solid #FFD700;
 }
 
@@ -718,7 +731,7 @@ footer {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(75, 0, 130, 0.5);
+    box-shadow: 0 6px 20px rgba(163, 54, 138, 0.5);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -762,6 +775,14 @@ footer {
     header {
         padding: 15px 30px;
     }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .footer-logo-img {
+        height: 50px;
+    }
 
     nav {
         display: none;
@@ -784,7 +805,7 @@ footer {
         gap: 15px;
         transition: right 0.4s;
         z-index: 1000;
-        box-shadow: -5px 0 20px rgba(75, 0, 130, 0.5);
+        box-shadow: -5px 0 20px rgba(163, 54, 138, 0.5);
         visibility: hidden;
     }
     
@@ -915,7 +936,9 @@ footer {
 </head>
 <body>
     <header>
-        <div class="logo">Christ's Heart</div>
+        <div class="logo">
+            <img src="christ-heart-logo.png" alt="Christ's Heart Ministries" class="logo-img">
+        </div>
         <nav>
             <a href="#home">HOME</a>
             <a href="#schedule">SCHEDULE</a>
@@ -1032,7 +1055,7 @@ footer {
                 <div class="schedule-details">
                     <div class="schedule-category">MAIN SESSIONS</div>
                     <h3 class="schedule-name">MTN Arena Kampala</h3>
-                    <p class="schedule-description">Evening Sessions with Bishop Isaiah & Rev. Deborah Mbuga featuring powerful worship, transformative teaching, and prophetic ministry.</p>
+                    <p class="schedule-description">Five nights of electrifying worship and life-changing ministry at Uganda's premier venue, hosting thousands in an atmosphere of supernatural breakthrough and divine encounter.</p>
                 </div>
                 <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('WhatsApp Image 2025-10-27 at 18.55.07.jpeg'); background-size: cover; background-position: center;"></div>
             </div>
@@ -1046,7 +1069,7 @@ footer {
                 <div class="schedule-details">
                     <div class="schedule-category">LEADERSHIP</div>
                     <h3 class="schedule-name">Church Leaders Sessions</h3>
-                    <p class="schedule-description">Specialized sessions designed to equip church leaders for greater Kingdom impact through strategic teaching and leadership development.</p>
+                    <p class="schedule-description">Exclusive morning intensives where pastors and ministry leaders receive advanced training in apostolic governance, church growth strategies, and generational discipleship principles.</p>
                 </div>
                 <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('leaders.jpeg'); background-size: cover; background-position: center;"></div>
             </div>
@@ -1060,7 +1083,7 @@ footer {
                 <div class="schedule-details">
                     <div class="schedule-category">FINALE</div>
                     <h3 class="schedule-name">Mukono Christ's Heart HQ</h3>
-                    <p class="schedule-description">Final weekend sessions at the ministry headquarters, culminating in powerful worship and commissioning for the year ahead.</p>
+                    <p class="schedule-description">Return to where it all began - intimate gatherings at the sacred birthplace of Christ's Heart Ministries, featuring prophetic impartation, covenant renewal, and strategic commissioning for 2026.</p>
                 </div>
                 <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('WhatsApp Image 2025-10-29 at 20.47.34.jpeg'); background-size: cover; background-position: center;"></div>
             </div>
@@ -1074,21 +1097,21 @@ footer {
                 <div class="schedule-details">
                     <div class="schedule-category">GUEST SPEAKER</div>
                     <h3 class="schedule-name">Dr. Adonijah Ogbonnaya</h3>
-                    <p class="schedule-description">International speaker from USA bringing powerful insights and prophetic ministry throughout the conference sessions.</p>
+                    <p class="schedule-description">Renowned apostolic voice from America delivering cutting-edge revelation on Kingdom advancement, marketplace ministry, and the emerging apostolic generation across multiple sessions.</p>
                 </div>
                 <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('WhatsApp Image 2025-10-28 at 00.55.39 (1).jpeg'); background-size: cover; background-position: center;"></div>
             </div>
 
             <div class="schedule-item">
                 <div class="schedule-date-box">
-                    <div class="schedule-month">HOST</div>
-                    <div class="schedule-day">TEAM</div>
+                    <div class="schedule-month">HOSTS</div>
+                    <div class="schedule-day"></div>
                     <div class="schedule-time">Leaders</div>
                 </div>
                 <div class="schedule-details">
                     <div class="schedule-category">CONFERENCE HOSTS</div>
                     <h3 class="schedule-name">Bishop Isaiah & Rev. Deborah Mbuga</h3>
-                    <p class="schedule-description">Founders of Christ's Heart Ministries International, leading this transformative seven-day gathering with wisdom and prophetic insight.</p>
+                    <p class="schedule-description">Visionary leaders guiding the 14th edition of this premier international conference, bringing apostolic insight and spiritual transformation to thousands of attendees.</p>
                 </div>
                 <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('WhatsApp Image 2025-10-28 at 00.55.39 (2).jpeg'); background-size: cover; background-position: center;"></div>
             </div>
@@ -1130,7 +1153,9 @@ footer {
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-column">
-                <div class="footer-logo">Christ's Heart</div>
+                <div class="footer-logo">
+                    <img src="christ-heart-logo.png" alt="Christ's Heart Ministries" class="footer-logo-img">
+                </div>
                 <div class="footer-mission">Raising Christian believers who pursue truth and wholeness of the Gospel after the heart of Christ</div>
                 <div class="footer-address">Headquarters: Mukono, Uganda</div>
                 <div class="footer-phone">+256 39 2177825</div>
@@ -1159,10 +1184,11 @@ footer {
             <div class="footer-column">
                 <h4>Connect With Us</h4>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">YouTube</a></li>
+                    <li><a href="https://www.facebook.com/ChristsHeartMinistries/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="http://instagram.com/christsheartministries/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://x.com/ChristsHeartMin" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.youtube.com/@ChristsHeart" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://www.tiktok.com/@christsheartmin" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
                 </ul>
             </div>
         </div>
