@@ -10,7 +10,7 @@
    Deep Purple: #4B0082
    Golden Yellow: #FFD700
    Dark Gray: #2C2C2C
-   Light Pink: #FFB6C1 (minor accent)
+   Dark Pink: #C2185B (minor accent)
 */
 
 * {
@@ -300,27 +300,27 @@ nav a:hover {
 .event-date {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: #FFB6C1;
+    color: #C2185B;
     font-size: 13px;
     margin-bottom: 10px;
-    background: rgba(255, 182, 193, 0.15);
+    background: rgba(194, 24, 91, 0.15);
     padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;
     font-weight: 500;
-    border: 1px solid rgba(255, 182, 193, 0.3);
+    border: 1px solid rgba(194, 24, 91, 0.3);
 }
 
 .event-time {
     font-size: 12px;
-    color: #FFB6C1;
+    color: #C2185B;
     margin-bottom: 15px;
     font-weight: 600;
-    background: rgba(255, 182, 193, 0.15);
+    background: rgba(194, 24, 91, 0.15);
     padding: 3px 6px;
     border-radius: 3px;
     display: inline-block;
-    border: 1px solid rgba(255, 182, 193, 0.3);
+    border: 1px solid rgba(194, 24, 91, 0.3);
 }
 
 .event-title {
@@ -336,7 +336,7 @@ nav a:hover {
 
 .event-details-extra {
     font-size: 11px;
-    color: #FFB6C1;
+    color: #C2185B;
     margin-top: 5px;
     font-style: italic;
     font-weight: 500;
@@ -344,125 +344,192 @@ nav a:hover {
 
 /* ===== SCHEDULE SECTION ===== */
 .schedule-section {
-    padding: 80px 60px;
-    background-color: #F5F5F5;
+    padding: 100px 80px;
+    background: linear-gradient(135deg, #F8F9FA 0%, #F5F5F5 100%);
+    position: relative;
+}
+
+.schedule-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4B0082 0%, #FFD700 50%, #4B0082 100%);
 }
 
 .schedule-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .schedule-intro {
     color: #2C2C2C;
-    font-size: 15px;
+    font-size: 16px;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
+    line-height: 1.8;
+    font-weight: 300;
 }
 
 .schedule-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .schedule-item {
     display: flex;
-    background-color: #FFFFFF;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FEFEFE 100%);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    border: 2px solid #E8E8E8;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(75, 0, 130, 0.1);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(75, 0, 130, 0.08);
+    position: relative;
+}
+
+.schedule-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.02) 0%, rgba(255, 215, 0, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 18px;
 }
 
 .schedule-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.2);
-    border-color: #4B0082;
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(75, 0, 130, 0.15);
+    border-color: rgba(75, 0, 130, 0.3);
+}
+
+.schedule-item:hover::before {
+    opacity: 1;
 }
 
 .schedule-date-box {
-    width: 120px;
-    min-width: 120px;
+    width: 160px;
+    min-width: 160px;
     background: linear-gradient(135deg, #4B0082 0%, #3D0066 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px 20px;
     color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-date-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 49%, rgba(255, 215, 0, 0.1) 50%, transparent 51%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
 .schedule-day {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 1;
     color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
 }
 
 .schedule-month {
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: #FFD700;
     font-weight: 600;
+    margin-bottom: 5px;
+    z-index: 2;
+    position: relative;
 }
 
 .schedule-time {
-    background-color: #FFD700;
+    background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
     color: #2C2C2C;
-    padding: 8px 15px;
-    font-size: 10px;
-    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 11px;
+    margin-top: 20px;
     font-weight: 700;
-    border-radius: 4px;
+    border-radius: 25px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    z-index: 2;
+    position: relative;
 }
 
 .schedule-details {
     flex: 1;
-    padding: 35px 40px;
+    padding: 45px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-left: 4px solid #FFD700;
+    border-left: 5px solid #FFD700;
+    position: relative;
+    z-index: 2;
 }
 
 .schedule-category {
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 11px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #FFB6C1;
-    margin-bottom: 10px;
+    color: #C2185B;
+    margin-bottom: 15px;
     font-weight: 600;
-    background: rgba(255, 182, 193, 0.15);
-    padding: 4px 8px;
-    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(194, 24, 91, 0.15) 0%, rgba(194, 24, 91, 0.08) 100%);
+    padding: 8px 15px;
+    border-radius: 20px;
     display: inline-block;
-    border: 1px solid rgba(255, 182, 193, 0.3);
+    border: 1px solid rgba(194, 24, 91, 0.25);
+    backdrop-filter: blur(10px);
 }
 
 .schedule-name {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     line-height: 1.2;
     color: #4B0082;
+    text-shadow: 0 1px 2px rgba(75, 0, 130, 0.1);
 }
 
 .schedule-description {
-    font-size: 13px;
+    font-size: 15px;
     color: #2C2C2C;
-    line-height: 1.5;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 500px;
 }
 
 .schedule-image {
-    width: 350px;
-    min-height: 250px;
+    width: 400px;
+    min-width: 400px;
+    min-height: 300px;
     background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
     background-size: cover;
     background-position: center;
@@ -473,6 +540,23 @@ nav a:hover {
     justify-content: center;
     color: white;
     font-size: 14px;
+    overflow: hidden;
+}
+
+.schedule-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.schedule-item:hover .schedule-image::before {
+    opacity: 1;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -978,7 +1062,7 @@ footer {
                     <h3 class="schedule-name">Mukono Christ's Heart HQ</h3>
                     <p class="schedule-description">Final weekend sessions at the ministry headquarters, culminating in powerful worship and commissioning for the year ahead.</p>
                 </div>
-                <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #228B22 0%, #32CD32 100%);"></div>
+                <div class="schedule-image" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('WhatsApp Image 2025-10-29 at 20.47.34.jpeg'); background-size: cover; background-position: center;"></div>
             </div>
 
             <div class="schedule-item">
