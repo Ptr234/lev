@@ -273,24 +273,24 @@ nav a:hover {
 .event-image {
     width: 100%;
     height: 300px;
+    overflow: hidden;
     background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 14px;
     position: relative;
 }
 
-.event-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #FFD700 0%, transparent 100%);
-    opacity: 0.1;
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.08);
 }
 
 .event-content {
@@ -462,24 +462,17 @@ nav a:hover {
 
 .schedule-image {
     width: 350px;
+    min-height: 250px;
     background: linear-gradient(135deg, #4B0082 0%, #6B2A9E 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 14px;
-}
-
-.schedule-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #FFD700 0%, transparent 100%);
-    opacity: 0.1;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -781,6 +774,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .event-image {
+        height: 250px;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
     }
@@ -803,7 +800,8 @@ footer {
 
     .schedule-image {
         width: 100%;
-        height: 200px;
+        height: 220px;
+        min-height: 220px;
     }
 
     .footer-content {
